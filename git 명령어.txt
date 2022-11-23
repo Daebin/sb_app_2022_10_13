@@ -1,0 +1,8 @@
+git init
+git remote add origin [원격리포지터리 주소]
+git config --global user.name [이름]
+git config --global user.email [이메일]
+git status
+git add .
+git commit -m "세팅"
+git push origin master
