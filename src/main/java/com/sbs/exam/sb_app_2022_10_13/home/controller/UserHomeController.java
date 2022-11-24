@@ -1,6 +1,7 @@
 package com.sbs.exam.sb_app_2022_10_13.home.controller;
 
 
+import com.sbs.exam.sb_app_2022_10_13.article.vo.Article;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -79,7 +80,7 @@ public class UserHomeController {
   @RequestMapping("/usr/home/getArticle")
   @ResponseBody
   public Article getArticle(){
-    Article article = new Article(1,"제목1");
+    Article article = new Article(1,"제목1","내용1");
 
     return article;
   }
@@ -87,8 +88,8 @@ public class UserHomeController {
   @RequestMapping("/usr/home/getArticles")
   @ResponseBody
   public List<Article> getArticles(){
-    Article article1 = new Article(1,"제목1");
-    Article article2 = new Article(2,"제목2");
+    Article article1 = new Article(1,"제목1","내용2");
+    Article article2 = new Article(2,"제목2","내용3");
 
     List<Article> list = new ArrayList<>();
     list.add(article1);
@@ -106,11 +107,3 @@ public class UserHomeController {
   }
 }
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-class Article{
-  public int id;
-  public String title;
-
-}
