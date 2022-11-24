@@ -39,5 +39,13 @@ public class UserHomeController {
    count++;
     return count;
   }
+
+  @RequestMapping("/usr/home/main5")
+  @ResponseBody
+  public String showMain5(){
+
+    count =0 ;
+    return "초기화";
+  }
 }
 
